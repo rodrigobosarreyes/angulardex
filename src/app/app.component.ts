@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Pokemon } from './models/pokemon.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angulardex';
+  title = 'AngularDex';
+  pokemon: Pokemon = {
+    id: 1,
+    imageUrl: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
+    name: 'Bulbasaur',
+    types: ['Grass', 'Poison']
+  };
+
+  onClickPokemonImage(pokemon: Pokemon): void {
+    console.log(pokemon);
+  }
 }
