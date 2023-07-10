@@ -9,6 +9,7 @@
 }
 
 .pokemon-detail {
+  cursor: default;
   .id {
     color: #919191;
     font-size: 9px;
@@ -20,6 +21,7 @@
   }
   .types {
     font-size: 9px;
+    margin-top: 13px;
     span {
       margin-right: 5px;
     }
