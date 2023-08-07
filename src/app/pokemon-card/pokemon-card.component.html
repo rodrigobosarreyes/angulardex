@@ -4,13 +4,13 @@
   </div>
   <div class="pokemon-detail">
     <div class="id">
-      N.º {{ pokemon.id }}
+      N.º {{ pokemon.id | padStart:4 }}
     </div>
     <div class="name">
-      {{ pokemon.name }}
+      {{ pokemon.name | titlecase }}
     </div>
     <div class="types">
-      <span *ngFor="let type of pokemon.types" [appPokemonType]="type">{{ type }}</span>
+      <span *ngFor="let type of pokemon.types" [appPokemonType]="type">{{ type | titlecase | translateType }}</span>
     </div>
   </div>
 </div>
