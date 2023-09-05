@@ -7,6 +7,7 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { PokemonTypeDirective } from './directives/pokemon-type/pokemon-type.directive';
 import { PadStartPipe } from './pipes/pad-start.pipe';
 import { TranslateTypePipe } from './pipes/translate-type.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TranslateTypePipe } from './pipes/translate-type.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
