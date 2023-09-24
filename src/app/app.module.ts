@@ -3,24 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
-import { PokemonTypeDirective } from './directives/pokemon-type/pokemon-type.directive';
-import { PadStartPipe } from './pipes/pad-start.pipe';
-import { TranslateTypePipe } from './pipes/translate-type.pipe';
-import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PokemonCardComponent,
-    PokemonTypeDirective,
-    PadStartPipe,
-    TranslateTypePipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
