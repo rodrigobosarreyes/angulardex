@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, mergeMap, tap } from 'rxjs';
-import { PokemonModule } from '../pokemon.module';
 
 @Injectable({
-  providedIn: PokemonModule
+  providedIn: null
 })
 export class PokemonService {
   url = 'https://pokeapi.co/api/v2/pokemon/?offset={{offset}}&limit=10';
