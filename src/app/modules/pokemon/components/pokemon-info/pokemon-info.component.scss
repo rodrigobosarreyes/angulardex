@@ -1,0 +1,21 @@
+.info {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #30a7d7;
+  border-radius: 15px;
+
+  p {
+    margin: 10px;
+  }
+
+  .label {
+    color: white;
+    font-weight: bold;
+  } 
+
+  > div {
+    width: 50%;
+  }
+}

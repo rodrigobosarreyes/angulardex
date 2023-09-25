@@ -1,3 +1,24 @@
 <div class="container">
-  <span>pokemon-detail works!</span>
+  <app-pokemon-pagination
+    (clickBtn)="onClickPagination($event)"
+  ></app-pokemon-pagination>
+  <h1>Bulbasaur <span class="muted">N.º 0001</span></h1>
+  <div class="details-container">
+    <div class="img-container">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="">
+    </div>
+    <div class="details">
+      <div class="description">
+        <span> Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo. </span>
+      </div>
+      <app-pokemon-info></app-pokemon-info>
+      <div class="types">
+        <p>Tipo</p>
+        <span class="type" *ngFor="let type of ptypes" [appPokemonType]="type">{{ type | titlecase | translateType }}</span>
+      </div>
+      <div class="weakness">
+        <p>Debilidad</p>
+      </div>
+    </div>
+  </div>
 </div>

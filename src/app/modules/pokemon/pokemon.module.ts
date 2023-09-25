@@ -10,6 +10,8 @@ import { PokemonTypeDirective } from './directives/pokemon-type/pokemon-type.dir
 import { TranslateTypePipe } from './pipes/translate-type/translate-type.pipe';
 import { PokemonService } from './services/pokemon.service';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
+import { PokemonPaginationComponent } from './components/pokemon-pagination/pokemon-pagination.component';
+import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-deta
     PokemonTypeDirective,
     TranslateTypePipe,
     PokemonPageComponent,
-    PokemonDetailComponent
+    PokemonDetailComponent,
+    PokemonPaginationComponent,
+    PokemonInfoComponent
   ],
   imports: [
     CommonModule,
