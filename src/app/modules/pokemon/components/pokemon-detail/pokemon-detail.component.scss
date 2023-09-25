@@ -33,6 +33,10 @@
 .details-container {
   display: flex;
   font-family: $text-font;
+
+  .img-container {
+    min-width: 380px;
+  }
 }
 
 span.type {
