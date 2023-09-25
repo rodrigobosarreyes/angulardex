@@ -1,23 +1,26 @@
-<div class="container">
+<div class="container" *ngIf="pokemon">
   <app-pokemon-pagination
+    [previous]="previous"
+    [next]="next"
     (clickBtn)="onClickPagination($event)"
   ></app-pokemon-pagination>
-  <h1>Bulbasaur <span class="muted">N.º 0001</span></h1>
+  <h1>{{ pokemon.name }} <span class="muted">N.º {{ pokemon.id | padStart:4 }}</span></h1>
   <div class="details-container">
     <div class="img-container">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="">
+      <img [src]="pokemon.imageUrl" [alt]="pokemon.name">
     </div>
     <div class="details">
       <div class="description">
-        <span> Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo. </span>
+        <span>{{ pokemon.description }}</span>
       </div>
-      <app-pokemon-info></app-pokemon-info>
+      <app-pokemon-info [pokemon]="pokemon"></app-pokemon-info>
       <div class="types">
         <p>Tipo</p>
-        <span class="type" *ngFor="let type of ptypes" [appPokemonType]="type">{{ type | titlecase | translateType }}</span>
+        <span class="type" *ngFor="let type of pokemon.types" [appPokemonType]="type">{{ type | titlecase | translateType }}</span>
       </div>
       <div class="weakness">
         <p>Debilidad</p>
+        <span class="type" *ngFor="let type of pokemon.weakness" [appPokemonType]="type">{{ type | titlecase | translateType }}</span>
       </div>
     </div>
   </div>
