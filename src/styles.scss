@@ -1,4 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+ box-sizing: border-box;
+}
+
 body {
-  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #424242 url('./assets/container_bg.png');
 }

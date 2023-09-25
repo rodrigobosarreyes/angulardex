@@ -9,6 +9,7 @@ import { PokemonPageComponent } from './components/pokemon-page/pokemon-page.com
 import { PokemonTypeDirective } from './directives/pokemon-type/pokemon-type.directive';
 import { TranslateTypePipe } from './pipes/translate-type/translate-type.pipe';
 import { PokemonService } from './services/pokemon.service';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PokemonService } from './services/pokemon.service';
     PokemonCardComponent,
     PokemonTypeDirective,
     TranslateTypePipe,
-    PokemonPageComponent
+    PokemonPageComponent,
+    PokemonDetailComponent
   ],
   imports: [
     CommonModule,

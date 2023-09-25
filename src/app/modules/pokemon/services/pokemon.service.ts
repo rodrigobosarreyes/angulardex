@@ -6,7 +6,7 @@ import { Observable, mergeMap, tap } from 'rxjs';
   providedIn: null
 })
 export class PokemonService {
-  url = 'https://pokeapi.co/api/v2/pokemon/?offset={{offset}}&limit=10';
+  url = 'https://pokeapi.co/api/v2/pokemon/?offset={{offset}}&limit=12';
 
   constructor(private readonly http: HttpClient) { }
 

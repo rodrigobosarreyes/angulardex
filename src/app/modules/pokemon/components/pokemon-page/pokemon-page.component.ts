@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { toArray } from 'rxjs';
 import { Pokemon } from '../../models/pokemon.model';
 import { PokemonService } from '../../services/pokemon.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-page',
@@ -11,10 +12,11 @@ import { PokemonService } from '../../services/pokemon.service';
 export class PokemonPageComponent {
   pokemons: Pokemon[] = [];
 
-  constructor(private pokemonService: PokemonService) {}
+  constructor(private pokemonService: PokemonService,
+    private router: Router) {}
 
   onClickPokemonImage(pokemon: Pokemon): void {
-    console.log(pokemon);
+    this.router.navigate(['pokemon', pokemon.id]);
   }
 
   ngOnInit(): void {
