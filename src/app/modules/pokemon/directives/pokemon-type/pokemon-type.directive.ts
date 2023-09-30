@@ -9,6 +9,7 @@ export class PokemonTypeDirective implements OnInit {
   @HostBinding('style.backgroundColor') bgColor: string = 'none';
   @HostBinding('style.color') color: string = '#fff';
   @HostBinding('style.padding') padding: string = '5px 10px';
+  @HostBinding('style.borderRadius') borderRadius = '5px';
 
   private colors: any = {
     'Normal': '#A8A77A',
