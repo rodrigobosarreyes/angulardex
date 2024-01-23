@@ -13,6 +13,7 @@ import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-deta
 import { PokemonPaginationComponent } from './components/pokemon-pagination/pokemon-pagination.component';
 import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PokeInputModule } from 'poke-input';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SharedModule,
     PokemonRoutingModule,
     NgbModule,
+    PokeInputModule,
   ],
   providers: [PokemonService],
 })

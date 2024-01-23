@@ -4,12 +4,26 @@ import { PageNotFoundComponent } from './core/components/page-not-found/page-not
 
 const routes: Routes = [
   { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
-  { path: 'pokemon', loadChildren: () => import('./modules/pokemon/pokemon.module').then(m => m.PokemonModule) },
-  { path: '**', pathMatch: 'full', component: PageNotFoundComponent, title: '404 Page Not Found' }
+  {
+    path: 'pokemon',
+    loadChildren: () =>
+      import('./modules/pokemon/pokemon.module').then((m) => m.PokemonModule),
+  },
+  {
+    path: 'games',
+    loadChildren: () =>
+      import('./modules/games/games.module').then((m) => m.GamesModule),
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    component: PageNotFoundComponent,
+    title: '404 Page Not Found',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

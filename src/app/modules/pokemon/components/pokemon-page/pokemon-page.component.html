@@ -1,5 +1,7 @@
 <ngb-alert>New version!</ngb-alert>
 
+<lib-poke-input label="Name"></lib-poke-input>
+
 <div class="pokemon-container">
   <app-pokemon-card *ngFor="let pokemon of pokemons"
   [pokemon]="pokemon" (clickImage)="onClickPokemonImage($event)"></app-pokemon-card>
