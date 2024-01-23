@@ -12,7 +12,7 @@ import { PokemonService } from './services/pokemon.service';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { PokemonPaginationComponent } from './components/pokemon-pagination/pokemon-pagination.component';
 import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,16 +22,15 @@ import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.com
     PokemonPageComponent,
     PokemonDetailComponent,
     PokemonPaginationComponent,
-    PokemonInfoComponent
+    PokemonInfoComponent,
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     SharedModule,
-    PokemonRoutingModule
+    PokemonRoutingModule,
+    NgbModule,
   ],
-  providers: [
-    PokemonService
-  ]
+  providers: [PokemonService],
 })
-export class PokemonModule { }
+export class PokemonModule {}
