@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PokemonRoutingModule } from './pokemon-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { PokemonPageComponent } from './components/pokemon-page/pokemon-page.component';
@@ -14,24 +14,18 @@ import { PokemonPaginationComponent } from './components/pokemon-pagination/poke
 import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.component';
 
 
-@NgModule({
-  declarations: [
-    PokemonCardComponent,
-    PokemonTypeDirective,
-    TranslateTypePipe,
-    PokemonPageComponent,
-    PokemonDetailComponent,
-    PokemonPaginationComponent,
-    PokemonInfoComponent
-  ],
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    SharedModule,
-    PokemonRoutingModule
-  ],
-  providers: [
-    PokemonService
-  ]
-})
+@NgModule({ declarations: [
+        PokemonCardComponent,
+        PokemonTypeDirective,
+        TranslateTypePipe,
+        PokemonPageComponent,
+        PokemonDetailComponent,
+        PokemonPaginationComponent,
+        PokemonInfoComponent
+    ], imports: [CommonModule,
+        SharedModule,
+        PokemonRoutingModule], providers: [
+        PokemonService,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class PokemonModule { }
